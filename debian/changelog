@@ -1,0 +1,12 @@
+xserver-xorg-video-fbturbo (1.20150305~205708) jessie; urgency=low
+
+  * Jessie build
+  * Version bump
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 26 May 2015 17:52:47 +0100
+
+xserver-xorg-video-fbturbo (1.20131208-1) unstable; urgency=low
+
+  * Initial packaging. Based off eed17d5586c3
+
+ --  <asb@asbradbury.org>  Wed, 11 Dec 2013 19:50:05 +0000

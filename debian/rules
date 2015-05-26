@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+override_dh_install:
+	cp xorg.conf 99-fbturbo.conf
+	dh_install --fail-missing
+
+# That's a plugin, use appropriate warning level:
+override_dh_shlibdeps:
+	dh_shlibdeps -- --warnings=6
+
+%:
+	dh $@ --with quilt,autoreconf,xsf --build-directory=build/

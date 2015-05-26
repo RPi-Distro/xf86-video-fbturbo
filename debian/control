@@ -1,0 +1,34 @@
+Source: xserver-xorg-video-fbturbo
+Section: x11
+Priority: optional
+Maintainer: Serge Schneider <serge@raspberrypi.org>
+Build-Depends:
+ debhelper (>= 9),
+ dh-autoreconf,
+ quilt,
+ libdrm-dev,
+ pkg-config,
+ xserver-xorg-dev (>= 2:1.11.99.901),
+ x11proto-video-dev,
+ x11proto-xf86dga-dev,
+ x11proto-xf86dri-dev,
+ x11proto-core-dev,
+ x11proto-fonts-dev,
+ x11proto-randr-dev,
+ x11proto-render-dev,
+ x11proto-dri2-dev,
+ xutils-dev
+Standards-Version: 3.9.6
+Vcs-Browser: https://github.com/asb/xf86-video-fbturbo
+
+Package: xserver-xorg-video-fbturbo
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${xviddriver:Depends},
+Provides:
+ ${xviddriver:Provides}
+Description: X.Org X server -- fbturbo display driver
+ This package provides the fbturbo driver which provides accelerated functions
+ on the Raspberry Pi and similar. More at <https://github.com/ssvb/xf86-video-fbturbo>
